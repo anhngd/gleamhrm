@@ -10,11 +10,14 @@ RUN apt-get update; \
         git \
         zlib1g-dev \
         libpng-dev \
+        zip \
+        libzip-dev \
         gnupg \
         gnupg2 \
         libzip-dev \
         gnupg1
 
+RUN apt-get install libonig-dev
 RUN docker-php-ext-install bcmath
 RUN docker-php-ext-install mbstring
 RUN docker-php-ext-install pdo
